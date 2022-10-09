@@ -14,11 +14,7 @@ async def main():
         tasks = []
         for line in info_region:
             tasks.append(asyncio.create_task(parse_main(InfoParse(session=parse.session, url=URL_CITY, path=line.url, region=line))))
-        info_city = await asyncio.gather(*tasks)
-        
-        final_info = []
-        for line in info_city:
-            final_info.append(line)
+        final_info = await asyncio.gather(*tasks)
 
         basedir = os.path.abspath(os.path.dirname(__file__))
         os.makedirs('data', exist_ok=True)

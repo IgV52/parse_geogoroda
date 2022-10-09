@@ -10,8 +10,9 @@ Parse region and city Russia
     'url': Url region(translate name), 
     'city': [
             {
-                'title': City, 
-                'url': Url city(translate name),
+             'title': City, 
+             'url': Url city(translate name),
+            }
             ]
     }]
 
@@ -25,4 +26,3 @@ Parse region and city Russia
 docker-compose up --build
 ```
 </details>
-
